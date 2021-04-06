@@ -17,7 +17,7 @@ class FCMController extends Controller
     {
         return view("fcm");
     }
-    public function sendNotification(){
+    public function sendNotification($token,$title,$body){
         $token = "e6GK6k4-R728cfGT-gcNOZ:APA91bHwWhUs9RW7yZBaYHeTYKow2SvfFoI5ciIAH0n3Z8BzGeE9oqoasrD_cROLiAQZBMBbAD5W1xFYV4AMuhN-IG9UgKIpns-c83CbRSFrAyu_C_pKPrYIRtaSAz6h6P6QADs-VWHJ";
         $from = "AAAASxvGu0I:APA91bHCxU7WxBgAPmwfoypuTBOLAqFmFvOm45RDKTFBSwuNEUu3LbdoP2YG7iFulC1Cja6ZgNCE4y5C_nlXeSMb4G7duEjxmfcRlb3eFEvndatkUWn4VIkjllAMVQSvDUjhPtePX8nu";
         $msg = array
@@ -52,48 +52,5 @@ class FCMController extends Controller
         // dd($result);
         curl_close( $ch );
     }
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }
