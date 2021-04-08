@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 Route::get('/fcm', 'FCMController@index');
 Route::get('/sn','FCMController@sendNotification');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
